@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from pastebin import PastebinAPI
  
 def parse_link(linkge,array):
     reqs = requests.get(linkge)
@@ -32,7 +33,8 @@ for x in range(2,24,1): #24 pages on the skincare s
 
 #print(*urls, sep="\n")
 f = open('Results.txt','w',encoding='utf-8')
-f.write('\n'.join(str(urls)))
+for row in urls:
+    f.write(urls + '\n')
 #f.write('%s\n' % urls)
 print(len(urls))
 #print(*op, sep='\n')
