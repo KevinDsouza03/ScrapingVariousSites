@@ -33,8 +33,8 @@ for x in range(2,24,1): #24 pages on the skincare s
 
 #print(*urls, sep="\n")
 f = open('Results.txt','w',encoding='utf-8')
-for row in urls:
-    f.write(urls + '\n')
+for listitem in urls:
+    f.write('%s\n'% listitem)
 #f.write('%s\n' % urls)
 print(len(urls))
 #print(*op, sep='\n')
